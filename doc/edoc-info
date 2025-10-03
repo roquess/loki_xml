@@ -1,0 +1,4 @@
+%% encoding: UTF-8
+{application,loki_xml}.
+{modules,[loki_xml,loki_xml_app,loki_xml_dist,loki_xml_merger,loki_xml_parser,
+          loki_xml_query,loki_xml_splitter,loki_xml_sup]}.

@@ -1,0 +1,30 @@
+{application, loki_xml,
+ [{description, "Effortless XML parsing for Erlang, simple, fast, and neat."},
+  {vsn, "0.1.0"},
+  {registered, [loki_xml_sup]},
+  {mod, {loki_xml_app, []}},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env, [
+      {default_chunk_size, 1048576},  % 1MB
+      {max_retries, 3},
+      {parse_timeout, 30000}
+  ]},
+  {modules, [
+      loki_xml,
+      loki_xml_app,
+      loki_xml_sup,
+      loki_xml_parser,
+      loki_xml_splitter,
+      loki_xml_query,
+      loki_xml_merger,
+      loki_xml_dist
+  ]},
+  {licenses, ["Apache-2.0"]},
+  {links, [
+    {"GitHub", "https://github.com/roquess/loki_xml"},
+    {"Hex.pm", "https://hex.pm/packages/loki_xml"}
+  ]}
+]}.
